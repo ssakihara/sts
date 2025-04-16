@@ -1,0 +1,56 @@
+{
+  "name": "@ssakihara/sts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ssakiahra typescript style",
+  "private": true,
+  "license": "MIT",
+  "author": "ssakihara",
+  "main": "dist/main.js",
+  "files": [
+    "dist",
+    "eslint.config.mjs"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky || true",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/types": "^19.5.0",
+    "@eslint/js": "^9.24.0",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@stylistic/eslint-plugin-ts": "^4.2.0",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-import-resolver-typescript": "^4.3.2",
+    "eslint-plugin-import-x": "^4.10.3",
+    "eslint-plugin-n": "^17.17.0",
+    "gts": "^6.0.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^24.2.3",
+    "tsc-alias": "^1.8.15",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "vitest": "^3.1.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/ssakihara"
+  },
+  "volta": {
+    "node": "22.14.0"
+  }
+}
