@@ -9,7 +9,6 @@
   "main": "dist/main.js",
   "files": [
     "dist",
-    "eslint.config.mjs",
     "tsconfig.json"
   ],
   "scripts": {
@@ -34,6 +33,7 @@
     "@semantic-release/release-notes-generator": "^14.0.3",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@stylistic/eslint-plugin-ts": "^4.2.0",
+    "@tsconfig/recommended": "^1.0.8",
     "@types/node": "^22.14.1",
     "@typescript-eslint/parser": "^8.29.1",
     "eslint": "^9.24.0",

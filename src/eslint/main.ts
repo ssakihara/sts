@@ -5,14 +5,14 @@ import * as pluginImportX from 'eslint-plugin-import-x';
 import stylisticJs from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 
-export default [
+export const eslintConfig = [
   {
     ...js.configs.recommended,
     ...nodePlugin.configs['flat/recommended'],
     ...pluginImportX.flatConfigs.recommended,
     ...pluginImportX.flatConfigs.typescript,
     ...stylisticJs.configs.recommended,
-    ...stylisticTs.configs.recommended,
+    ...stylisticTs.configs.all,
     plugins: {
       n: nodePlugin,
       import: pluginImportX,
