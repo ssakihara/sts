@@ -19,6 +19,9 @@
     "prepare": "husky || true",
     "test": "vitest"
   },
+  "dependencies": {
+    "gts": "^6.0.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
@@ -37,7 +40,6 @@
     "eslint-import-resolver-typescript": "^4.3.2",
     "eslint-plugin-import-x": "^4.10.3",
     "eslint-plugin-n": "^17.17.0",
-    "gts": "^6.0.2",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "rimraf": "^6.0.1",
