@@ -14,7 +14,6 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "preinstall": "npm run build",
     "build": "rimraf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
