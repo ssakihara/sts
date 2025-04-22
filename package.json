@@ -24,7 +24,8 @@
   "dependencies": {
     "@tsconfig/node22": "^22.0.1",
     "@tsconfig/recommended": "^1.0.8",
-    "gts": "^6.0.2"
+    "gts": "^6.0.2",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -46,7 +47,6 @@
     "eslint-plugin-n": "^17.17.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
-    "rimraf": "^6.0.1",
     "semantic-release": "^24.2.3",
     "tsc-alias": "^1.8.15",
     "tsx": "^4.19.3",
