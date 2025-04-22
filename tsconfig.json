@@ -1,5 +1,8 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
+  "extends": [
+    "@tsconfig/recommended/tsconfig.json",
+    "@tsconfig/node22/tsconfig.json"
+  ],
   "compilerOptions": {
     "declaration": true,
     "resolveJsonModule": true,
@@ -14,5 +17,4 @@
       "~/*": ["src/*"]
     }
   },
-  "exclude": ["dist", "node_modules", "commitlint.config.ts", "vite.config.ts"]
 }

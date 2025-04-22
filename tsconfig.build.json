@@ -7,5 +7,5 @@
       "~/*": ["*"]
     }
   },
-  "exclude": ["dist", "node_modules", "test", "commitlint.config.ts", "vite.config.ts"]
+  "include": ["src/**/*.ts"]
 }
