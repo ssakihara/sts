@@ -40,7 +40,7 @@ export const eslintFlatConfig = [
             ],
         },
     },
-    ...tsEslint.configs.recommended.map(config => ({
+    ...tsEslint.configs.recommended.map((config) => ({
         ...config,
         files: ['**/*.ts', '**/*.tsx'],
     })),
@@ -82,49 +82,28 @@ export const eslintFlatConfig = [
         name: 'locals/format/js',
         files: ['**/*.js', '**/*.mjs'],
         rules: {
-            '@stylistic/js/indent': [
-                'error',
-                2
-            ],
-            '@stylistic/js/quotes': [
-                'error',
-                'single',
-            ],
-            '@stylistic/js/semi': [
-                'error',
-                'always',
-            ],
-            '@stylistic/js/comma-spacing': [
-                'error',
-            ],
-            '@stylistic/js/key-spacing': [
-                'error',
-            ],
-        }
+            '@stylistic/js/indent': ['error', 2],
+            '@stylistic/js/quotes': ['error', 'single'],
+            '@stylistic/js/semi': ['error', 'always'],
+            '@stylistic/js/comma-spacing': ['error'],
+            '@stylistic/js/key-spacing': ['error'],
+            '@stylistic/js/object-curly-spacing': ['error', 'always'],
+            '@stylistic/js/space-infix-ops': ['error'],
+            '@stylistic/js/max-len': ['error'],
+        },
     },
     {
         name: 'locals/format/ts',
         files: ['**/*.ts', '**/*.tsx'],
         rules: {
-            '@stylistic/ts/indent': [
-                'error',
-                2
-            ],
-            '@stylistic/ts/quotes': [
-                'error',
-                'single',
-            ],
-            '@stylistic/ts/semi': [
-                'error',
-                'always',
-            ],
-            '@stylistic/ts/comma-spacing': [
-                'error',
-            ],
-            '@stylistic/ts/key-spacing': [
-                'error',
-            ],
-        }
+            '@stylistic/ts/indent': ['error', 2],
+            '@stylistic/ts/quotes': ['error', 'single'],
+            '@stylistic/ts/semi': ['error', 'always'],
+            '@stylistic/ts/comma-spacing': ['error'],
+            '@stylistic/ts/key-spacing': ['error'],
+            '@stylistic/ts/object-curly-spacing': ['error', 'always'],
+            '@stylistic/ts/space-infix-ops': ['error'],
+        },
     },
     {
         name: 'locals/ignore',
