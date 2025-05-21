@@ -89,6 +89,7 @@ export const eslintFlatConfig = [
       '@stylistic/js/comma-spacing': ['error'],
       '@stylistic/js/key-spacing': ['error'],
       '@stylistic/js/object-curly-spacing': ['error', 'always'],
+      '@stylistic/js/space-infix-ops': ['error'],
       '@stylistic/js/max-len': ['error'],
     },
   },
@@ -102,7 +103,7 @@ export const eslintFlatConfig = [
       '@stylistic/ts/comma-spacing': ['error'],
       '@stylistic/ts/key-spacing': ['error'],
       '@stylistic/ts/object-curly-spacing': ['error', 'always'],
-      '@stylistic/ts/max-len': ['error'],
+      '@stylistic/ts/space-infix-ops': ['error'],
     },
   },
   {
