@@ -2,32 +2,34 @@ import js from '@eslint/js';
 import nodePlugin from 'eslint-plugin-n';
 import tsEslint from 'typescript-eslint';
 import * as pluginImportX from 'eslint-plugin-import-x';
-import stylisticJs from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
+import stylistic from '@stylistic/eslint-plugin';
 
 export const eslintFlatConfig = [
+  stylistic.configs.customize({
+    indent: 2,
+    quotes: 'single',
+    semi: true,
+  }),
   {
     ...js.configs.recommended,
     ...nodePlugin.configs['flat/recommended'],
     ...pluginImportX.flatConfigs.recommended,
     ...pluginImportX.flatConfigs.typescript,
-    ...stylisticJs.configs.recommended,
-    ...stylisticTs.configs.all,
+    ...stylistic.configs.recommended,
     plugins: {
-      n: nodePlugin,
-      import: pluginImportX,
-      '@stylistic/js': stylisticJs,
-      '@stylistic/ts': stylisticTs,
+      'n': nodePlugin,
+      'import': pluginImportX,
+      '@stylistic': stylistic,
     },
     rules: {
       'block-scoped-var': 'error',
-      eqeqeq: 'error',
+      'eqeqeq': 'error',
       'no-var': 'error',
       'prefer-const': 'error',
       'eol-last': 'error',
       'prefer-arrow-callback': 'error',
       'no-trailing-spaces': 'error',
-      quotes: ['warn', 'single', { avoidEscape: true }],
+      'quotes': ['warn', 'single', { avoidEscape: true }],
       'no-restricted-properties': [
         'error',
         {
@@ -41,7 +43,7 @@ export const eslintFlatConfig = [
       ],
     },
   },
-  ...tsEslint.configs.recommended.map((config) => ({
+  ...tsEslint.configs.recommended.map(config => ({
     ...config,
     files: ['**/*.ts', '**/*.tsx'],
   })),
@@ -77,33 +79,6 @@ export const eslintFlatConfig = [
       ],
       'no-dupe-class-members': 'off',
       'require-atomic-updates': 'off',
-    },
-  },
-  {
-    name: 'locals/format/js',
-    files: ['**/*.js', '**/*.mjs'],
-    rules: {
-      '@stylistic/js/indent': ['error', 2],
-      '@stylistic/js/quotes': ['error', 'single'],
-      '@stylistic/js/semi': ['error', 'always'],
-      '@stylistic/js/comma-spacing': ['error'],
-      '@stylistic/js/key-spacing': ['error'],
-      '@stylistic/js/object-curly-spacing': ['error', 'always'],
-      '@stylistic/js/space-infix-ops': ['error'],
-      '@stylistic/js/max-len': ['error'],
-    },
-  },
-  {
-    name: 'locals/format/ts',
-    files: ['**/*.ts', '**/*.tsx'],
-    rules: {
-      '@stylistic/ts/indent': ['error', 2],
-      '@stylistic/ts/quotes': ['error', 'single'],
-      '@stylistic/ts/semi': ['error', 'always'],
-      '@stylistic/ts/comma-spacing': ['error'],
-      '@stylistic/ts/key-spacing': ['error'],
-      '@stylistic/ts/object-curly-spacing': ['error', 'always'],
-      '@stylistic/ts/space-infix-ops': ['error'],
     },
   },
   {
